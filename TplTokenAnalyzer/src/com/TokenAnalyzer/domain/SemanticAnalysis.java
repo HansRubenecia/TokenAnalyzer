@@ -36,7 +36,6 @@ public class SemanticAnalysis
 		{
 			return "Semantically Incorrect!";
 		}
-		
 
 	}
 }

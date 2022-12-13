@@ -195,6 +195,21 @@ public class Gui {
 		check3.setIcon(imgCheck3);
 		check3.setVisible(false);
 		panel.add(check3);
+
+		JLabel error = new JLabel("");
+		error.setBounds(17, 267, 44, 44);
+		ImageIcon imgError = new ImageIcon(new ImageIcon(Gui.class.getResource("/com/TokenAnalyzer/Resource/error.png")).getImage().getScaledInstance(44,44, Image.SCALE_DEFAULT));
+		error.setIcon(imgError);
+		error.setVisible(false);
+		panel.add(error);
+		
+		JLabel error2 = new JLabel("");
+		error2.setBounds(17, 333, 44, 44);
+		ImageIcon imgError2 = new ImageIcon(new ImageIcon(Gui.class.getResource("/com/TokenAnalyzer/Resource/error.png")).getImage().getScaledInstance(44,44, Image.SCALE_DEFAULT));
+		error2.setIcon(imgError2);
+		error2.setVisible(false);
+		panel.add(error2);
+		
 		
 		JScrollPane inputPane = new JScrollPane();
 		inputPane.setBounds(20, 70, 630, 87);
@@ -261,6 +276,10 @@ public class Gui {
 				check.setVisible(false);
 				check2.setVisible(false);
 				check3.setVisible(false);
+				error.setVisible(false);
+				error2.setVisible(false);
+				
+				
 				resultField.setText("");
 				inputField.setText(fileContent);
         		
@@ -339,6 +358,7 @@ public class Gui {
 					btSynU.setVisible(false);
 					btSynS.setVisible(false);
 				}
+				else if(error.isVisible());
 				else
 				{
 					btSynU.setVisible(true);
@@ -358,6 +378,10 @@ public class Gui {
             		check2.setVisible(true);
             		btSem.setVisible(false);
                 	btSemU.setVisible(true);
+            	}
+            	else
+            	{
+            		error.setVisible(true);
             	}
             	
 		
@@ -380,6 +404,7 @@ public class Gui {
 					btSemU.setVisible(false);
 					btSemS.setVisible(false);
 				}
+				else if(error2.isVisible());
 				else
 				{
 					btSemU.setVisible(true);
@@ -400,6 +425,11 @@ public class Gui {
 				if(resultField.getText().equals("Semantically Correct!"))
             	{
 					check3.setVisible(true);
+            	}
+				else
+            	{
+            		error2.setVisible(true);
+	
             	}
             	
 			}

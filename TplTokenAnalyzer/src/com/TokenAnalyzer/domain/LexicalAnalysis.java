@@ -63,7 +63,6 @@ public class LexicalAnalysis
         	hm.put(a, "<value>");
         	this.value = "String";
         }
-	
 		
         for(String a : stringList) 
 		{
